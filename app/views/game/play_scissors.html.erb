@@ -1,0 +1,47 @@
+<%= link_to "Play Rock", "/rock" %>
+<%= link_to "Play Paper", "/paper" %>
+<%= link_to "Play Scissors", "/scissors" %>
+
+<p>
+    The computer played <%= @computer_move %>
+</p>
+
+<% if @computer_move == "rock" %>
+<img src = "http://localhost:3000/assets/images/rock.png" width = "200">
+<% end %>
+
+<% if @computer_move == "paper" %>
+<img src = "http://localhost:3000/assets/images/paper.png" width = "200">
+<% end %>
+
+<% if @computer_move == "scissors" %>
+<img src = "http://localhost:3000/assets/images/scissors.png" width = "200">
+<% end %>
+
+<p>
+    You played <%= @user_move %>
+</p>
+
+<% if @user_move == "rock" %>
+<img src = "http://localhost:3000/assets/images/rock.png" width = "200">
+<% end %>
+
+<% if @user_move == "paper" %>
+<img src = "http://localhost:3000/assets/images/paper.png" width = "200">
+<% end %>
+
+<% if @user_move == "scissors" %>
+<img src = "http://localhost:3000/assets/images/scissors.png" width = "200">
+<% end %>
+
+<% if @game_results == "You tied!"%>
+<h3> You tied! </h3>
+<% end %>
+
+<% if @game_results == "You win!"%>
+<h3> You win! </h3>
+<% end %>
+
+<% if @game_results == "You lose!"%>
+<h3> You lose! </h3>
+<% end %>
