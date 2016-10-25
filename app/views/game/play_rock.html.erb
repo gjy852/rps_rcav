@@ -1,45 +1,63 @@
 <div class = "container">
   <div class = "row">
-    <div class = "col-md-6">
-      <p>
-        The computer played <%= @computer_move %>
-      </p>
+    <div class = "col-md-4 col-md-offset-2 col-xs-6 ">
+      <div class = "panel panel-success">
+        <div class = "panel-heading">
+          <h2 class = "panel-title text-center">
+            <p>
+              The computer played <%= @computer_move %>
+            </p>
+          </h2>
+        </div>
 
-      <% if @computer_move == "rock" %>
-      <img src = "http://localhost:3000/assets/images/rock.png" width = "200">
-      <% end %>
+        <% if @computer_move == "rock" %>
+        <div class = "panel-body">
+          <img class="img-responsive" src = "http://localhost:3000/assets/images/rock.png" width = "200">
+          <% end %>
 
-      <% if @computer_move == "paper" %>
-      <img src = "http://localhost:3000/assets/images/paper.png" width = "200">
-      <% end %>
+          <% if @computer_move == "paper" %>
+          <img class = "img-responsive" src = "http://localhost:3000/assets/images/paper.png" width = "200">
+          <% end %>
 
-      <% if @computer_move == "scissors" %>
-      <img src = "http://localhost:3000/assets/images/scissors.png" width = "200">
-      <% end %>
-    </div>
+          <% if @computer_move == "scissors" %>
+          <img class = "img-responsive" src = "http://localhost:3000/assets/images/scissors.png" width = "200">
+          <% end %>
+        </div>
+      </div>
 
-    <div class = "col-md-6">
-      <p>
-        You played <%= @user_move %>
-      </p>
+      <div class = "col-md-4 col-md-offset-2 col-xs-6 ">
+        <div class = "panel panel-success">
+          <div class = "panel-heading">
+            <h2 class = "panel-title text-center">
+              <p>
+                You played <%= @user_move %>
+              </p>
+            </h2>
+          </div>
 
-      <% if @user_move == "rock" %>
-      <img src = "http://localhost:3000/assets/images/rock.png" width = "200">
-      <% end %>
-    </div>
-  </div>
-</div>
+          <% if @user_move == "rock" %>
+          <div class = "panel-body">
+            <img class = "img-responsive" src = "http://localhost:3000/assets/images/rock.png" width = "200">
+            <% end %>
+          </div>
+        </div>
+      </div>
 
-<p> <%= @game_results %> </p>
+      <div class = "row">
+        <div class = "col-md-12">
+          <div class = "well text-center">
 
-<% if @game_results == "You tied!"%>
-<h3> You tied! </h3>
-<% end %>
+            <% if @game_results == "You tied!"%>
+            <h3> You tied! </h3>
+            <% end %>
 
-<% if @game_results == "You win!"%>
-<h3> You win! </h3>
-<% end %>
+            <% if @game_results == "You win!"%>
+            <h3> You win! </h3>
+            <% end %>
 
-<% if @game_results == "You lose!"%>
-<h3> You lose! </h3>
-<% end %>
+            <% if @game_results == "You lose!"%>
+            <h3> You lose! </h3>
+            <% end %>
+          </div>
+        </div>
+      </div>
