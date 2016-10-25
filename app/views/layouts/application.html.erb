@@ -2,13 +2,40 @@
 <html>
 <head>
   <title>RockPaperScissors</title>
+
+  <link rel="stylesheet"   href="http://localhost:3000/assets/css/bootstrap.css">
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>``
+
 </head>
+
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-8 col-md-offset-2 col-xs-12">
+      <div class = "btn-group btn-group-justified">
+        <div class = "btn btn-block">
+          <%= link_to "Play Rock", "/rock" %>
+        </div>
+
+        <div class = "btn btn-block">
+          <%= link_to "Play Paper", "/paper" %>
+        </div>
+
+        <div class = "btn btn-block">
+          <%= link_to "Play Scissors", "/scissors" %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <body>
 
 <%= yield %>
 
 </body>
+
 </html>

@@ -23,7 +23,7 @@ class GameController < ApplicationController
   def user_plays_rock
     moves = ["rock", "paper", "scissors"]
 
-    @user_move = moves.sample
+    @user_move = "rock"
     @computer_move = moves.sample
     #@game_results = "You tied!"
     @game_results = determine_winner(@user_move, @computer_move)
@@ -34,7 +34,7 @@ class GameController < ApplicationController
   def user_plays_paper
     moves = ["rock", "paper", "scissors"]
 
-    @user_move = moves.sample
+    @user_move = "paper"
     @computer_move = moves.sample
     @game_results = ""
 
@@ -60,7 +60,7 @@ class GameController < ApplicationController
   def user_plays_scissors
     moves = ["rock", "paper", "scissors"]
 
-    @user_move = moves.sample
+    @user_move = "scissors"
     @computer_move = moves.sample
     @game_results = ""
 
